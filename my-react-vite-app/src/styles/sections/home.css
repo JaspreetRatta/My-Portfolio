@@ -1,0 +1,85 @@
+.home-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 40px 100px; /* offset header + breathing room */
+  overflow: hidden; /* prevent scrollbars during animations */
+}
+
+/* Left column (text) */
+.hero-left {
+  flex: 2;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 3s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-left h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #C9A66B; /* golden */
+  font-family: "Playfair Display", serif;
+}
+
+.hero-left h3 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #555;
+  margin-top: 45px;
+  margin: 0 0 0 150px;
+}
+
+/* First name */
+.first-name {
+  font-size: 72px;
+  margin-left: 0 0 0 100px; /* offset for visual separation */
+  color: #C9A66B; /* golden */
+}
+
+/* Last name */
+.last-name {
+  font-size: 62px;
+  margin: 0 0 0 150px; /* offset for visual separation */
+  color: #C9A66B;
+}
+
+/* Right column (photo) */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-right img {
+  width: 420px;
+  height: 580px; /* tall rectangle */
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #C9A66B;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

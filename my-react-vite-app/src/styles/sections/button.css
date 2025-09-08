@@ -1,0 +1,12 @@
+.custom-button {
+  padding: 10px 20px;
+  border: none;
+  background: #0077ff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.custom-button:hover {
+  background: #005fcc;
+}

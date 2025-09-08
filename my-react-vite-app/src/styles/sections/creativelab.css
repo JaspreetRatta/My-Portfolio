@@ -1,0 +1,68 @@
+/* Section wrapper overall styles */
+.creative-section {
+  max-width: 1000px;       /* content ki max width */
+  margin: 0 auto;          /* center horizontally */
+  padding: 40px 20px;      /* top-bottom + side spacing */
+  text-align: left;        /* left align text */
+  line-height: 1.6;        /* line spacing for readability */
+}
+
+/* Section Title (Blumiintx Creative Lab) */
+.section-title {
+  font-size: 28px;
+  color: #c9a66b;          /* golden color */
+  margin-bottom: 20px;
+}
+
+/* Intro paragraph under title */
+.intro {
+  font-size: 16px;
+  color: #555;             /* soft dark gray */
+  margin-bottom: 30px;
+}
+
+/* Grid container for cards */
+.creative-grid {
+  display: grid; /* makes responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;     /* space between cards */
+}
+
+/* Individual cards */
+.creative-card {
+  background: #fff;             /* white background */
+  border: 1px solid #eee;       /* light border */
+  border-radius: 10px;          /* rounded corners */
+  padding: 20px;                /* inner spacing */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* hover animation */
+}
+
+/* Hover effect for card */
+.creative-card:hover {
+  transform: translateY(-6px);  /* card moves up slightly */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08); /* soft shadow */
+}
+
+/* Card headings */
+.creative-card h3 {
+  color: #c9a66b;               /* golden color */
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Card text */
+.creative-card p {
+  font-size: 15px;
+  color: #444;                  /* darker gray for readability */
+}
+
+/* Fade-up animation for smooth appearance */
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}

@@ -1,0 +1,43 @@
+.creative-preview {
+  padding: 100px 10%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.preview-box {
+  max-width: 700px;
+  background: #ffffff;
+  padding: 60px 40px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.preview-box h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #C9A66B; /* golden heading */
+}
+
+.preview-box p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.explore-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #C9A66B;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #D4AF37;
+}
