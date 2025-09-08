@@ -1,12 +1,15 @@
+/* ========================= */
+/* Hero Section (Desktop)    */
+/* ========================= */
 .home-hero {
-  display: flex;
+  display: flex;                         /* text left + image right */
   align-items: center;
   justify-content: space-between;
   gap: 80px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 140px 40px 100px; /* offset header + breathing room */
-  overflow: hidden; /* prevent scrollbars during animations */
+  padding: 140px 40px 100px;             /* offset header + breathing room */
+  overflow: hidden;                      /* prevent scrollbars during animations */
 }
 
 /* Left column (text) */
@@ -31,21 +34,21 @@
   font-size: 1.2rem;
   font-weight: 200;
   color: #555;
-  margin-top: 45px;
-  margin: 0 0 0 150px;
+  margin-top: 20px;
+  margin-left: 150px; /* push right for desktop */
 }
 
 /* First name */
 .first-name {
   font-size: 72px;
-  margin-left: 0 0 0 100px; /* offset for visual separation */
-  color: #C9A66B; /* golden */
+  margin-left: 0; /* keep clean */
+  color: #C9A66B;
 }
 
 /* Last name */
 .last-name {
   font-size: 62px;
-  margin: 0 0 0 150px; /* offset for visual separation */
+  margin-left: 150px; /* visual separation */
   color: #C9A66B;
 }
 
@@ -69,7 +72,9 @@
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
-/* Animations */
+/* ========================= */
+/* Animations                */
+/* ========================= */
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -81,5 +86,41 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/* ========================= */
+/* Mobile Responsive Styles  */
+/* ========================= */
+@media (max-width: 768px) {
+  .home-hero {
+    flex-direction: column;         /* stack text + photo */
+    padding: 80px 20px 60px;        /* smaller padding */
+    gap: 40px;
+    text-align: center;             /* center all text */
+  }
+
+  .hero-left h1 {
+    font-size: 2.2rem;              /* smaller headings */
+  }
+
+  .first-name, .last-name {
+    margin-left: 0;                 /* remove extra spacing */
+    display: block;                 /* stack vertically */
+  }
+
+  .last-name {
+    margin-top: 10px;
+    font-size: 2rem;
+  }
+
+  .hero-left h3 {
+    font-size: 1rem;
+    margin: 15px 0 0;               /* reset margins */
+  }
+
+  .hero-right img {
+    width: 240px;                   /* smaller image for phones */
+    height: auto;                   /* auto-adjust height */
   }
 }

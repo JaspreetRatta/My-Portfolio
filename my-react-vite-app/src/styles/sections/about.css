@@ -15,3 +15,23 @@
   text-align: left;
 
 }
+
+/* Desktop */
+.about-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* stack photo + text */
+    text-align: center;
+  }
+
+  .about-section img {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+}

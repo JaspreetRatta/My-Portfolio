@@ -1,28 +1,73 @@
+/* General header */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .brand {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
+  color: #c9a66b;
+}
+
+/* Default nav (desktop) */
+nav {
+  display: flex;
+  gap: 25px;
 }
 
 nav a {
-  margin-left: 20px;
   text-decoration: none;
   color: #333;
+  font-size: 15px;
   transition: color 0.3s;
 }
 
-nav a:hover,
-nav a.active {
-  color: #cedceb;
+nav a.active,
+nav a:hover {
+  color: #c9a66b;
+}
+
+/* Hamburger hidden by default */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ---------------- */
+/* Mobile styles    */
+/* ---------------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+
+  nav {
+    display: none; /* hide nav by default */
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  nav.open {
+    display: flex; /* show nav when menuOpen is true */
+  }
+
+  nav a {
+    padding: 10px 0;
+    font-size: 16px;
+  }
 }

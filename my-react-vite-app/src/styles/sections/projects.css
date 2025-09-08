@@ -1,61 +1,75 @@
+/* Whole projects section wrapper */
 .projects-section {
-  text-align: left;
-  padding: 20px;
-  justify-content: space-between;
-  gap: 100px;
+  max-width: 1200px;       /* keeps section width limited on big screens */
+  margin: 0 auto;          /* center section horizontally */
+  padding: 80px 40px;      /* space around section */
 }
 
-.projects-section h2 {
-  margin-bottom: 5px;
-  font-size: 1.9rem;
-  color: #C9A66B;
-  padding: 20px;   
+/* Section title (Projects heading) */
+.section-title {
+  font-size: 28px;         /* font size of title */
+  color: #c9a66b;          /* golden color */
+  text-align: center;      /* centered heading */
+  margin-bottom: 40px;     /* space below heading */
 }
 
+/* Grid layout for project cards */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  padding: 20px;
+  display: grid;           /* use CSS grid */
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns on desktop */
+  gap: 20px;               /* space between cards */
 }
 
+/* Individual project cards */
 .project-card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  overflow: hidden;
-  padding-bottom: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;        /* white card background */
+  border: 1px solid #eee;  /* light border */
+  border-radius: 8px;      /* rounded corners */
+  padding: 20px;           /* inner spacing */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05); /* subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* hover animation */
 }
 
+/* Hover effect */
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transform: translateY(-5px); /* lift card upward */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* stronger shadow */
 }
 
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
+/* Project title */
 .project-card h3 {
-  margin: 15px;
-  font-size: 1.3rem;
+  color: #c9a66b;          /* golden color */
+  margin-bottom: 10px;     /* spacing below */
 }
 
+/* Project description */
 .project-card p {
-  margin: 0 15px 15px;
-  color: #555;
+  color: #444;             /* dark gray text */
+  font-size: 15px;         /* text size */
+  line-height: 1.6;        /* line spacing */
 }
 
-.project-card a {
-  margin-left: 15px;
-  color: #C9A66B;
-  font-weight: 600;
-  text-decoration: none;
+/* Tools line */
+.tools {
+  font-size: 13px;         /* smaller text for tools */
+  color: #777;             /* lighter gray */
+  margin-top: 8px;         /* spacing above */
 }
 
-.project-card a:hover {
-  color: #D4AF37;
+/* ========================= */
+/* Mobile Responsive Styles  */
+/* ========================= */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+
+  .project-card {
+    padding: 15px;        /* smaller inner spacing */
+    font-size: 0.9rem;    /* slightly smaller text */
+  }
+
+  .section-title {
+    font-size: 22px;      /* smaller title for mobile */
+  }
 }

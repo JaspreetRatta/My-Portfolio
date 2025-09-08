@@ -21,8 +21,19 @@ const projects = [
     title: "React + Vite Website",
     description: "My experiment building modern simple portfolio website.",
     image: "/projects/website.jpg",
-    link: "https://github.com/your-repo"
+    link: "https://github.com/JaspreetRatta/My-Portfolio"
+  },
+  {
+    id: 4,
+    title: "",
+    description: "My experiment building modern simple portfolio website.",
+    image: "/projects/website.jpg",
+    link: "https://github.com/JaspreetRatta/My-Portfolio"
   }
+
+  
+
+  
 ];
 
 const Projects = () => (

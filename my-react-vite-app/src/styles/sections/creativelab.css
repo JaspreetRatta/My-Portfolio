@@ -66,3 +66,78 @@
   from { transform: translateY(20px); opacity: 0; }
   to   { transform: translateY(0); opacity: 1; }
 }
+
+/* Whole section wrapper */
+.creative-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  text-align: left;
+}
+
+/* Section title */
+.section-title {
+  font-size: 28px;
+  color: #c9a66b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Intro paragraph */
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Grid layout */
+.creative-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Individual creative card */
+.creative-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creative-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Card title */
+.creative-card h3 {
+  color: #c9a66b;
+  margin-bottom: 10px;
+}
+
+/* Card description */
+.creative-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ========================= */
+/* Mobile responsive styles  */
+/* ========================= */
+@media (max-width: 768px) {
+  .creative-grid {
+    grid-template-columns: 1fr; /* stack into single column */
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .intro {
+    font-size: 14px;
+  }
+}
