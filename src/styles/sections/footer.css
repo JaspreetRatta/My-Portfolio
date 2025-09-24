@@ -1,0 +1,7 @@
+footer {
+  background: #f5f5f5;
+  padding: 40px 20px 30px; /* increased top padding */
+  margin-top: 250px;        /* pushes it further down from content */
+  text-align: center;
+  color: #666;
+}

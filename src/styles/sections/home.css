@@ -1,0 +1,159 @@
+/* ========================= */
+/* Hero Section (Desktop)    */
+/* ========================= */
+.home-hero {
+  display: flex;                         
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 40px 100px;             
+  overflow: hidden;                      
+}
+
+/* Left column (text) */
+.hero-left {
+  flex: 2;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 2s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-left h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #C9A66B; /* golden */
+  font-family: "Playfair Display", serif;
+}
+
+.hero-left h3 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #444;
+  margin-top: 20px;
+  margin-left: 0; /* reset alignment */
+}
+
+/* First name */
+.first-name {
+  font-size: 72px;
+  margin-left: 0; 
+  color: #C9A66B;
+}
+
+/* Last name */
+.last-name {
+  font-size: 62px;
+  margin-left: 40px;  /* smaller gap than 150px */
+  margin-top: -10px;  
+  color: #C9A66B;
+}
+
+/* Right column (photo) */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 1.2s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-right img {
+  width: 400px;
+  height: 560px; 
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #C9A66B;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.hero-right img:hover {
+  transform: scale(1.02);
+}
+
+/* ========================= */
+/* Resume Button             */
+/* ========================= */
+.download-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(45deg, #C9A66B, #a78734);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-btn:hover {
+  background: linear-gradient(45deg, #a78734, #7a5a22);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* ========================= */
+/* Animations                */
+/* ========================= */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========================= */
+/* Mobile Responsive Styles  */
+/* ========================= */
+@media (max-width: 768px) {
+  .home-hero {
+    flex-direction: column;         
+    padding: 80px 20px 60px;        
+    gap: 40px;
+    text-align: center;             
+  }
+
+  .hero-left h1 {
+    font-size: 2.2rem;              
+  }
+
+  .first-name, .last-name {
+    margin-left: 0;                 
+    display: block;                 
+  }
+
+  .last-name {
+    margin-top: 10px;
+    font-size: 2rem;
+  }
+
+  .hero-left h3 {
+    font-size: 1rem;
+    margin: 15px 0 0;               
+  }
+
+  .hero-right img {
+    width: 240px;                   
+    height: auto;                   
+  }
+
+  .download-btn {
+    margin-left: 0; /* center on mobile */
+  }
+}

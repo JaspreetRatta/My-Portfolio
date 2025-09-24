@@ -1,0 +1,45 @@
+/* ========================= */
+/* Creative Preview Section  */
+/* ========================= */
+.creative-preview {
+  margin-top: 120px;                 /* 🔥 push whole section down */
+  padding: 120px 10%;
+  text-align: center;
+  background: #fffaf5;               /* soft cream background */
+}
+
+/* Heading */
+.creative-preview h2 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;               /* space under heading */
+  color: #C9A66B;                    /* golden */
+  font-family: "Playfair Display", serif;
+}
+
+/* Description */
+.creative-preview p {
+  max-width: 700px;
+  margin: 0 auto 40px;               /* center + space below */
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Button */
+.explore-btn {
+  display: inline-block;
+  padding: 16px 36px;
+  background: #C9A66B;
+  color: #fff;
+  border-radius: 50px;               /* pill shape */
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #D4AF37;               /* brighter golden */
+  transform: translateY(-3px);       /* lift effect */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}

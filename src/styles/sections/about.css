@@ -1,0 +1,64 @@
+/* ========================= */
+/* About Section (Desktop)   */
+/* ========================= */
+.about-section {
+  display: flex;                         /* Put image and text side by side */
+  align-items: center;                   /* Align them vertically center */
+  justify-content: space-between;        /* Push image left, text right */
+  gap: 50px;                             /* Space between image and text */
+
+  margin-top: 120px;                     /* 🔥 Push the WHOLE section down */
+  padding: 0 40px;                       /* Left + right breathing room */
+}
+
+/* Left column (image) */
+.about-left img {
+  width: 300px;                          /* Control image size */
+  border-radius: 15px;                   /* Rounded corners */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);/* Subtle shadow */
+}
+
+/* Right column (text) */
+.about-right {
+  flex: 1;                               /* Take remaining width */
+  text-align: left;                      /* Keep text aligned to left */
+  font-size: 20px;                       /* Slightly larger text */
+  line-height: 1.6;                      /* Make text easier to read */
+}
+
+/* About title */
+.about-right h2 {
+  font-size: 2rem;                       /* Bigger title */
+  margin-bottom: 20px;                   /* Space below heading */
+  color: #C9A66B;                        /* Golden heading */
+}
+
+/* About paragraph */
+.about-right p {
+  font-size: 1.05rem;                    /* Normal readable text */
+  color: #444;                           /* Softer black */
+}
+
+/* ========================= */
+/* Mobile Responsive Styles  */
+/* ========================= */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;              /* Stack image + text vertically */
+    text-align: center;                  /* Center text for mobile */
+    margin-top: 80px;                    /* Slightly smaller top space */
+    padding: 0 20px;                     /* Reduce side padding */
+  }
+
+  .about-left img {
+    width: 220px;                        /* Smaller image on phones */
+  }
+
+  .about-right {
+    text-align: justify;                  /* Center text */
+  }
+
+  .about-right h2 {
+    font-size: 1.8rem;                   /* Slightly smaller heading */
+  }
+}
