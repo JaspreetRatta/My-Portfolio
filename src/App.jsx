@@ -11,6 +11,7 @@ import CreativePreview from "./components/sections/CreativePreview";
 import ProjectDetail from "./components/sections/ProjectDetail"; // new page
 
 
+
 const App = () => (
   <Router>
     <Header />
@@ -28,7 +29,7 @@ const App = () => (
     <Route path="/creative-lab/:id" element={<ProjectDetail />} /> 
     </Routes>
     <Footer />
-  </Router>
+  </Router> 
 );
 
 export default App;
