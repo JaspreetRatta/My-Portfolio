@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/sections/home.css";
-import Jaspreet from "../../assets/Jaspreet.JPG";
+import Jaspreet from "../../assets/jaspreet.jpg";
 
 const Home = () => (
   <section id="home" className="home-hero fade-up">
@@ -25,7 +25,7 @@ const Home = () => (
     </div>
 
     <div className="hero-right">
-      <img src={Jaspreet} alt="Jaspreet Ratta" className="profile-photo" />
+      <img src={Jaspreet} alt="mee" className="profile-photo" />
     </div>
   </section>
 );

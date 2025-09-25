@@ -1,11 +1,11 @@
 import React from "react";
 import "../../styles/sections/about.css";
-import Jaspreet2 from "../../assets/Jaspreet2.JPG"
+import Jaspreet2 from "../../assets/jaspreet2.jpg"
 
 const About = () => (
   <section id="about" className="section about-section">
     <div className="hero-right">
-           <img src={Jaspreet2} alt="Jaspreet Ratta" className="profile-photo" />
+           <img src={Jaspreet2} alt="me" className="profile-photo" />
         </div>
     <div className="about-right">
       <h2>About Me</h2>
