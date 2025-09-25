@@ -31,5 +31,7 @@ const App = () => (
     <Footer />
   </Router> 
 );
+console.log("🚀 Fresh deploy test");
+
 
 export default App;
